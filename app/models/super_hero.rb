@@ -8,12 +8,13 @@ class SuperHero
     @bio = params[:bio]
     self.save
   end
+  def self.save 
+    self.class.all << self 
+  end 
   
   def self.all  
     @@all 
   end 
   
-  def self.save 
-    self.class.all << self 
-  end 
+  
 end 
